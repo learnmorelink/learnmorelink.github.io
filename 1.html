@@ -30,7 +30,11 @@
 <p>Loading...</p>
 
 <script>
+  // On iOS mobile Safari doing an imediate redirect meant Google Analytics didn't track the user.
+  // Adding a 3 second delay before redirecting.
+  setTimeout(function () {
     window.location.href = 'https://google.com?s=1';
+  }, 3000);
 </script>
 
 
